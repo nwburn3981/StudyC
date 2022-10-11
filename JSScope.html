@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>JS Scope</title>
+    <script>
+      //Scenario I - Global Scope
+      var gvar = "Hello";
+
+      function sayHello() {
+        var lvar = "Hi";
+        console.log("From Function: gvar=" + gvar);
+        console.log("From Function: lvar=" + lvar);
+        return lvar;
+      }
+
+      //Scenario II - Global Scope but limiting t local using let
+      for (let i = 0; i < 5; i++) {
+        var msg = "For loop"; //global
+        console.log(i); //local
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      //Scenario I - Global Scope
+      sayHello();
+      console.log("From head: gvar=" + gvar);
+
+      //Scenario II - Global Scope
+      //console.log(i) //in block or local scope
+      console.log(msg);
+
+      //Scenario III - Local Variables
+      // console.log(j) //in block or local scope
+      console.log(msg1);
+    </script>
+  </body>
+</html>

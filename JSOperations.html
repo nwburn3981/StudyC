@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Operations</title>
+    <script>
+      //NaN
+      /* console.log(isNaN(123));
+
+      console.log(isNaN("123"));
+      console.log(isNaN("123.34"));
+      console.log(isNaN(132.34));
+
+      console.log(isNaN(NaN)); //true
+      console.log(isNaN(null));
+      console.log(isNaN(undefined)); //true
+      console.log(isNaN()); //true */
+
+      //fixed
+      var num = 123.45678;
+      console.log(num.toFixed(2));
+
+      //Arithmetic Operations
+      console.log(11 + 22);
+      console.log("11" + 22); // + will mean append -- operator overload
+      console.log("Hello" + 22);
+      console.log(11 - 22);
+      console.log("Hello" - 22);
+      console.log(11 * 22);
+      console.log("Hello" * 22);
+
+      //Built-in functions
+      var num = "123.45678";
+      console.log(num + 22);
+      console.log(parseInt(num) + 22);
+      console.log(parseInt(num) + "22");
+      console.log(parseInt(num) + parseFloat("22.33"));
+      console.log(parseInt("11Hello11"));
+      console.log(Number(num) + 22);
+
+      //String operations
+      console.log("String 1 \n String 2");
+      console.log("String 1" + " String 2");
+
+      //Comparing numbers
+      var num = 8;
+      console.log(num == 8);
+      console.log(num === 8);
+    </script>
+  </head>
+  <body></body>
+</html>
