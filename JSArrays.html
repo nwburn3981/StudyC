@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Arrays</title>
+    <script>
+      //Arrays
+      var weekdays = ["sun", "mon", "tues", "wed", "thurs", "fri", "sat"];
+      console.log(
+        weekdays +
+          "\ntype of " +
+          typeof weekdays +
+          "\nlength = " +
+          weekdays.length
+      );
+
+      //Arrays with mixed type of data
+      var myArray = [11, 2.3, "Chitra", true, NaN, , "HelloWorld"];
+      console.log(myArray);
+      console.log("length = " + myArray.length);
+
+      //Dynamic Array
+      var myDArray = [];
+      console.log(myDArray);
+      console.log("length = " + myDArray.length);
+
+      //Add an element into the array
+      myDArray[0] = "Dog";
+      myDArray[1] = "Cat";
+      myDArray[2] = "Sheep";
+      myDArray[3] = "";
+      myDArray[4] = "Goat";
+
+      console.log(myDArray);
+      console.log("length = " + myDArray.length);
+
+      //Delete an elemnet from the array
+      delete myDArray[3];
+      console.log(myDArray);
+
+      //push an element into the array
+      myDArray.push("Cow");
+      console.log(myDArray);
+
+      //pop an element from the array
+      myDArray.pop();
+      console.log(myDArray);
+
+      //add an element in the front of the array
+      myDArray.unshift("Goose");
+      console.log(myDArray);
+
+      //remove an element in the front of the array
+      myDArray.shift();
+      console.log(myDArray);
+    </script>
+  </head>
+  <body></body>
+</html>
