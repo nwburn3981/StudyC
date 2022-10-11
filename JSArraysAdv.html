@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Arrays Advanced</title>
+    <script>
+      //Arrays
+      var shapes = ["Circle", "Square", "Triangle", "Pentagon"];
+      console.log("Array contains: " + shapes);
+
+      //reverse
+      console.log("Reversed:\n" + shapes.reverse());
+      console.log("After Reverse:\n" + shapes);
+
+      //Sort
+      console.log("Sort:\n" + shapes.sort());
+      console.log("After Sort:\n" + shapes);
+
+      //Join
+      console.log("Join:\n" + shapes.join("|"));
+      console.log("Join:\n" + shapes.join());
+
+      //String Split
+      var str = "Octagon | Hexagon | Septagon";
+      console.log("String split\n" + str.split("|"));
+
+      //Concat arrays
+      var birds = shapes.concat("Dove", "Goose", "Parrot");
+      console.log(birds);
+      console.log(shapes);
+
+      //Slice
+      console.log("Slice:\n" + shapes.slice(1, 4));
+      console.log("Slice:\n" + birds.slice(1, 5));
+      console.log("Slice:\n" + birds.slice(-1, -2)); //Empty
+
+      //Splice
+      console.log("Splice:\n" + shapes.splice(2, 2, "Hexagon, Septagon"));
+      console.log(shapes);
+
+      //Search
+      var searchItem = "Pentagon";
+      console.log(
+        "Search for index of Pentagon:\n" + shapes.indexOf(searchItem)
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

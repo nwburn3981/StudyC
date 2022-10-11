@@ -55,6 +55,30 @@
       //remove an element in the front of the array
       myDArray.shift();
       console.log(myDArray);
+
+      //Negative index for an element in the array
+      myDArray[-4] = "Lamb";
+      console.log(myDArray);
+      console.log("length = " + myDArray.length);
+
+      delete myDArray[-4];
+      console.log(myDArray);
+
+      //Traversing or accessing the elements of the array using for loops
+      //for loop I
+      for (var i = 0; i < myDArray.length; i++) {
+        console.log(myDArray[i]);
+      }
+
+      //for loop index II
+      for (var i in myDArray) {
+        console.log(myDArray[i]);
+      }
+
+      //for loop item of III
+      for (var item of myDArray) {
+        console.log(myDArray[item]);
+      }
     </script>
   </head>
   <body></body>
