@@ -45,6 +45,25 @@
       console.log(
         "Search for index of Pentagon:\n" + shapes.indexOf(searchItem)
       );
+
+      //Associative arrays or merging objects
+      var bird = {
+        name: "Dove",
+        id: "1234",
+        isTagged: true,
+      };
+
+      console.log(bird);
+
+      bird["color"] = "White";
+      console.log(bird);
+
+      for (key in bird) {
+        console.log("Values for each " + key + " is: " + bird[key]);
+      }
+
+      bird["name"] = "Parrot";
+      console.log(bird.name);
     </script>
   </head>
   <body></body>

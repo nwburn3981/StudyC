@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Loops</title>
+    <script>
+      //Scenario I - if loop
+      var day = "Sat";
+
+      if (day === "Sat" || day === "Sun") console.log("Its Weekend!");
+      else if (day === "Fri") console.log("TGIF");
+      else console.log("Its Week Day");
+
+      //Scenario II - ternary loop / operation
+      console.log(day === "Sat" || day === "Sun" ? "Weekend" : "WeekDay");
+
+      //Scenario III - switch loop
+      switch (day) {
+        case "Mon":
+          console.log("Hey its Monday");
+          break;
+        case "Tue":
+          console.log("Hey its Tuesday");
+        case "Wed":
+          console.log("Hey its Wednesday");
+        case "Thur":
+          console.log("Hey its Thursday");
+        case "Fri":
+          console.log("Hey its Friday");
+          break;
+        case "Sat":
+        case "Sun":
+          console.log("Hey its Weekend");
+          break;
+        default:
+          console.log("Which planet are you on?!");
+          break;
+      }
+
+      //while loop - sum the numbers
+      var sum = 0,
+        number = 1;
+      while (number <= 10) {
+        sum += number;
+        number++;
+      }
+      console.log("Sum = " + sum);
+    </script>
+  </head>
+  <body></body>
+</html>
