@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Functions</title>
+    <script>
+      //Scenario I - Simple Function
+      function add(n1, n2) {
+        return Number(n1) + Number(n2);
+      }
+
+      //Scenario II - Function with arguments array
+      function addArg() {
+        // no Args present
+        var sum = 0;
+
+        for (var i = 0; i < arguments.length; i++) {
+          sum += Number(arguments[i]);
+        }
+        return sum;
+      }
+
+      //Scenario III - Function with default arguments
+      function f1(a, b, c) {
+        console.log("a = " + a + " type = " + typeof a);
+        console.log("b = " + b + " type = " + typeof b);
+        console.log("c = " + c + " type = " + typeof c);
+      }
+
+      //Scenario IV - Function with function variables and named functions
+      function f2(a1) {
+        return "run f2()";
+      }
+
+      var f3 = function f2(a1) {
+        return "run f2()";
+      };
+
+      //Scenario V - Function with arrays and in function
+      function cube(x) {
+        // in function
+        return x * x * x;
+      }
+
+      function processArray(inFunc, inArray) {
+        var resultArray = [];
+        for (var i in inArray) {
+          resultArray[i] = inFunc(inArray[i]);
+        }
+        return resultArray;
+      }
+
+      //Scenario VI - Nested Function
+      function func1(msg) {
+        console.log("Msg from func1: " + msg);
+
+        function func2(msg) {
+          console.log("Msg from func2: " + msg);
+
+          return "func2: " + msg;
+        }
+
+        return "func1: " + func2(msg);
+      }
+
+      //Scenario VII - Functions returning values
+      function main(op) {
+        var add = function (a1, a2) {
+          return a1 + a2;
+        };
+
+        if (op === "add") {
+          return add;
+        }
+      }
+      function processArray(inFun, nArray) {}
+    </script>
+  </head>
+  <body>
+    <script>
+      //Scenario I - Simple Function
+      /*var num1 = prompt("Enter the first number");
+      var num2 = prompt("Enter the second number");
+      alert("The sum is: " + add(num1, num2));*/
+
+      //Scenario II - function with arguments
+      console.log("Function with arguments: " + addArg(2, 3, 6));
+      console.log(
+        "Function with arguments: " + addArg(2.5, 3.66666644, 6.34, 7, 1212)
+      );
+
+      //Scenario III - Function with default arguments
+      f1("Hello");
+      f1(2, 3);
+      f1(2, 3, "Hello");
+
+      //Scenario IV - Function with function variables and named functions
+      console.log(f2);
+      console.log(f2("Hello"));
+
+      console.log(f3);
+      console.log(f3("Hello"));
+
+      //Scenario V - Function with arrays
+      console.log(
+        "Functions with arrays - Squaring\n" +
+          processArray(
+            function (x) {
+              return x * x;
+            },
+            [2, 3, 4, 5]
+          )
+      );
+      console.log(
+        "Cubing Functions with arrays\n" + processArray(cube, [2, 3, 4, 5])
+      );
+
+      //Scenario VI - Nested Function
+      console.log(func1("Hello World"));
+
+      //Scenario VII - Functions returning values
+      console.log(main("add")(2, 3));
+    </script>
+  </body>
+</html>
