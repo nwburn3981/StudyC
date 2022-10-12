@@ -73,6 +73,10 @@
 
         if (op === "add") {
           return add;
+        } else if (op === "mul") {
+          return function (a1, a2) {
+            return a1 * a2;
+          };
         }
       }
       function processArray(inFun, nArray) {}
@@ -122,6 +126,7 @@
 
       //Scenario VII - Functions returning values
       console.log(main("add")(2, 3));
+      console.log(main("mult")(2, 3));
     </script>
   </body>
 </html>

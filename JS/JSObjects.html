@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Objects</title>
+    <script>
+      //Scenario I - SImple Object
+      var student = {
+        name: "Jack",
+        id: 1234,
+      };
+
+      //Scenario II - Nested Object
+      var student = {
+        bame: "Peter",
+        id: 1000,
+        marks: {
+          subject: "Math",
+          score: 99,
+        },
+      };
+
+      //Scenario III - Object Initializer and anon functions
+      var myCircle = {
+        radius: 5,
+        getArea: function () {
+          return this.radius * this.radius * Math.PI;
+        },
+        toString: toString,
+      };
+
+      function toString() {
+        return "Circle radius: " + this.radius + " is created";
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      //Scenario I - Simple Object
+      console.log(student);
+      console.log(student.name);
+      console.log(student.id);
+
+      student.name = "Nick";
+      console.log(student.name);
+
+      student["id"] = 5678;
+      console.log(student["id"]);
+
+      var key = "id";
+      console.log(student[key]);
+      console.log(student.hasOwnProperty("name"));
+      console.log(student.hasOwnProperty("age"));
+
+      delete student.id;
+      console.log(student.id);
+      console.log(student.hasOwnProperty("id"));
+
+      //Scenario II - Nested Object
+      console.log(student.marks.subject);
+      console.log(student.marks.score);
+      console.log(student.marks);
+
+      //Scenario III - Object Initializer and anon functions
+      console.log(myCircle.getArea());
+      console.log(myCircle.radius);
+      console.log(myCircle.toString());
+    </script>
+  </body>
+</html>
